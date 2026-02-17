@@ -55,7 +55,7 @@ Simply type any of the prefixes above in a Dart file and press `Tab` to expand t
 | context.read<T>() | ❌ |
 | context.watch<T>() | ❌ |
 | context.select<T, R>() | ❌ |
-| BlocSelector | ❌ |
+| BlocSelector | ✅ |
 | MultiBlocListener | ✅ |
 | MultiRepositoryProvider | ❌ |
 | on<EventType>() | ❌ |
