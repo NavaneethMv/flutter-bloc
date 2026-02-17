@@ -1,0 +1,8 @@
+id = "flutter-bloc"
+name = "Flutter Bloc"
+version = "1.0.0"
+schema_version = 1
+authors = ["Navaneeth <mvnavaneeth5@gmail.com>", "Abhay <abhaykv111@gmail.com>"]
+description = "Snippets for Flutter Bloc pattern development"
+repository = "https://github.com/NavaneethMv/zed-flutter-bloc.git"
+snippets = "./snippets/dart.json"
