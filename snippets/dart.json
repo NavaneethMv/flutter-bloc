@@ -1,0 +1,145 @@
+{
+    "BLoC Class": {
+        "prefix": "bloc",
+        "body": [
+            "import 'package:flutter_bloc/flutter_bloc.dart';",
+            "",
+            "part '${1:counter}_event.dart';",
+            "part '${1:counter}_state.dart';",
+            "",
+            "class ${2:Counter}Bloc extends Bloc<${2:Counter}Event, ${2:Counter}State> {",
+            "  ${2:Counter}Bloc() : super(${2:Counter}Initial()) {",
+            "    on<${2:Counter}Event>((event, emit) {",
+            "      ${0}",
+            "    });",
+            "  }",
+            "}"
+        ],
+        "description": "Create a new BLoC class"
+    },
+    "BLoC Event": {
+        "prefix": "blocevent",
+        "body": [
+            "part of '${1:counter}_bloc.dart';",
+            "",
+            "@immutable",
+            "sealed class ${2:Counter}Event {}",
+            "",
+            "class ${2:Counter}${3:Started} extends ${2:Counter}Event {",
+            "  ${0}",
+            "}"
+        ],
+        "description": "Create BLoC event file"
+    },
+    "BLoC State": {
+        "prefix": "blocstate",
+        "body": [
+            "part of '${1:counter}_bloc.dart';",
+            "",
+            "@immutable",
+            "sealed class ${2:Counter}State {}",
+            "",
+            "final class ${2:Counter}Initial extends ${2:Counter}State {}",
+            "",
+            "final class ${2:Counter}Loading extends ${2:Counter}State {}",
+            "",
+            "final class ${2:Counter}Success extends ${2:Counter}State {",
+            "  ${0}",
+            "}",
+            "",
+            "final class ${2:Counter}Error extends ${2:Counter}State {",
+            "  final String message;",
+            "  ",
+            "  ${2:Counter}Error(this.message);",
+            "}"
+        ],
+        "description": "Create BLoC state file"
+    },
+    "Cubit": {
+        "prefix": "cubit",
+        "body": [
+            "import 'package:flutter_bloc/flutter_bloc.dart';",
+            "",
+            "part '${1:counter}_state.dart';",
+            "",
+            "class ${2:Counter}Cubit extends Cubit<${2:Counter}State> {",
+            "  ${2:Counter}Cubit() : super(${2:Counter}Initial());",
+            "",
+            "  ${0}",
+            "}"
+        ],
+        "description": "Create a new Cubit"
+    },
+    "BlocBuilder": {
+        "prefix": "blocbuilder",
+        "body": [
+            "BlocBuilder<${1:Counter}Bloc, ${1:Counter}State>(",
+            "  builder: (context, state) {",
+            "    ${0}",
+            "    return Container();",
+            "  },",
+            ")"
+        ],
+        "description": "BlocBuilder widget"
+    },
+    "BlocListener": {
+        "prefix": "bloclistener",
+        "body": [
+            "BlocListener<${1:Counter}Bloc, ${1:Counter}State>(",
+            "  listener: (context, state) {",
+            "    ${0}",
+            "  },",
+            "  child: ${2:child},",
+            ")"
+        ],
+        "description": "BlocListener widget"
+    },
+    "BlocConsumer": {
+        "prefix": "blocconsumer",
+        "body": [
+            "BlocConsumer<${1:Counter}Bloc, ${1:Counter}State>(",
+            "  listener: (context, state) {",
+            "    ${0}",
+            "  },",
+            "  builder: (context, state) {",
+            "    return Container();",
+            "  },",
+            ")"
+        ],
+        "description": "BlocConsumer widget"
+    },
+    "BlocProvider": {
+        "prefix": "blocprovider",
+        "body": [
+            "BlocProvider(",
+            "  create: (context) => ${1:Counter}Bloc(),",
+            "  child: ${2:child},",
+            ")"
+        ],
+        "description": "BlocProvider widget"
+    },
+    "MultiBlocProvider": {
+        "prefix": "multiblocprovider",
+        "body": [
+            "MultiBlocProvider(",
+            "  providers: [",
+            "    BlocProvider(create: (context) => ${1:First}Bloc()),",
+            "    BlocProvider(create: (context) => ${2:Second}Bloc()),",
+            "    ${0}",
+            "  ],",
+            "  child: ${3:child},",
+            ")"
+        ],
+        "description": "MultiBlocProvider widget"
+    },
+    "RepositoryProvider": {
+        "prefix": "repositoryprovider",
+        "body": [
+            "RepositoryProvider(",
+            "  create: (context) => ${1:MyRepository}(),",
+            "  child: ${2:child},",
+            ")"
+        ],
+        "description": "RepositoryProvider widget"
+    }
+}
