@@ -162,5 +162,19 @@
             ")"
         ],
         "description": "MultiBlocListener Widget"
+    },
+    "BlocSelector": {
+        "prefix": "blocselector",
+        "body": [
+            "BlocSelector<${1:Counter}Bloc, ${1:Counter}State, Selected> (",
+            "   selector: (state) {",
+            "       return state;",
+            "   },",
+            "   builder: (context, state) {",
+            "       return Container();",
+            "   },",
+            ")"
+        ],
+        "description": "BlocSelector Widget"
     }
 }
