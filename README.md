@@ -30,6 +30,7 @@ A collection of useful Flutter BLoC pattern snippets for Zed editor to speed up 
 | `blocconsumer` | BlocConsumer widget |
 | `blocprovider` | BlocProvider widget |
 | `multiblocprovider` | MultiBlocProvider widget |
+| `multibloclistener` | MultiBlocListener widget |
 | `repositoryprovider` | RepositoryProvider widget |
 
 ## Usage
@@ -54,8 +55,8 @@ Simply type any of the prefixes above in a Dart file and press `Tab` to expand t
 | context.read<T>() | ❌ |
 | context.watch<T>() | ❌ |
 | context.select<T, R>() | ❌ |
-| BlocSelector | ❌ |
-| MultiBlocListener | ❌ |
+| BlocSelector | ✅ |
+| MultiBlocListener | ✅ |
 | MultiRepositoryProvider | ❌ |
 | on<EventType>() | ❌ |
 | BlocObserver | ❌ |

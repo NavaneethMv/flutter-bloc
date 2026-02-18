@@ -141,5 +141,40 @@
             ")"
         ],
         "description": "RepositoryProvider widget"
+    },
+    "MultiBlocListener": {
+        "prefix": "multibloclistener",
+        "body": [
+            "MultiBlocListener(",
+            "   listeners: [",
+            "       BlocListener<${1:Counter}Bloc, ${1:Counter}State>(",
+            "           listener: (context, state) {",
+            "                   ",
+            "           },",
+            "       ),",
+            "       BlocListener<${2:Counter}Bloc, ${2:Counter}State>(",
+            "           listener: (context, state) {",
+            "                   ",
+            "           },",
+            "       ),",
+            "   ],",
+            "   child: Container(),",
+            ")"
+        ],
+        "description": "MultiBlocListener Widget"
+    },
+    "BlocSelector": {
+        "prefix": "blocselector",
+        "body": [
+            "BlocSelector<${1:Counter}Bloc, ${1:Counter}State, Selected> (",
+            "   selector: (state) {",
+            "       return state;",
+            "   },",
+            "   builder: (context, state) {",
+            "       return Container();",
+            "   },",
+            ")"
+        ],
+        "description": "BlocSelector Widget"
     }
 }
